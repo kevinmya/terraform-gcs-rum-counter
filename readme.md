@@ -5,7 +5,7 @@
 
 # terraform-gcs-rum-counter
 
-A lightweight Python utility to scan Terraform state files stored in Google Cloud Storage (GCS) and estimate Terraform managed resource (RUM) counts.
+A lightweight Python utility to scan Terraform state files stored in Google Cloud Storage (GCS) and estimate Terraform managed resource counts (RUM).
 
 The script:
 
@@ -31,8 +31,8 @@ The script:
 project/<project_name>.txt
 ```
 
-- No external helper modules required
 - Simple Python-only implementation
+- No external helper modules required
 
 ---
 
@@ -77,19 +77,6 @@ Install dependencies:
 ```bash
 python3 -m pip install -r requirements.txt
 ```
-
----
-
-# requirements.txt
-
-```text
-google-cloud-storage
-google-auth
-```
-
----
-
-# Authentication
 
 Authenticate locally using:
 
@@ -141,7 +128,7 @@ python3 terraform_gcs_rum_counter.py \
 
 # Example Output
 
-![Example Output](docs/example-output.png)
+![CLI example output](docs/example-output.png)
 
 ---
 
@@ -170,11 +157,9 @@ This script estimates Terraform managed resources (RUM) based on Terraform state
 
 Reference pricing:
 
-- HCP Terraform Pricing  
-  https://www.hashicorp.com/pricing
+- [HCP Terraform Pricing](https://www.hashicorp.com/pricing)
 
-- Managed Resource Billing Documentation  
-  https://developer.hashicorp.com/terraform/cloud-docs/overview/estimate-hcp-terraform-cost
+- [Managed Resource Billing Documentation](https://developer.hashicorp.com/terraform/cloud-docs/overview/estimate-hcp-terraform-cost)
 
 The counting logic in this project attempts to approximate HashiCorp managed resource billing behavior by excluding:
 
@@ -183,46 +168,6 @@ The counting logic in this project attempts to approximate HashiCorp managed res
 - helper/non-managed resources
 
 This project is not affiliated with or endorsed by HashiCorp.
-
----
-
-# Recommended .gitignore
-
-```gitignore
-# Python
-__pycache__/
-*.pyc
-
-# macOS
-.DS_Store
-
-# Virtual environments
-venv/
-.env
-
-# Terraform
-*.tfstate
-*.tfstate.backup
-.terraform/
-
-# Generated reports
-project/
-```
-
----
-
-# Repository Structure
-
-```text
-terraform-gcs-rum-counter/
-├── terraform_gcs_rum_counter.py
-├── README.md
-├── requirements.txt
-├── LICENSE
-├── .gitignore
-└── docs/
-    └── example-output.png
-```
 
 ---
 
