@@ -7,6 +7,8 @@
 
 A lightweight Python CLI that scans Terraform state files stored in Google Cloud Storage (GCS) and estimates your **Terraform managed resource (RUM)** counts — helping you understand potential [HCP Terraform billing](https://developer.hashicorp.com/terraform/cloud-docs/overview/estimate-hcp-terraform-cost) before you get a surprise invoice.
 
+> 📖 **Background:** Read the full write-up on Medium — [How I Built a Tool to Estimate Terraform Managed Resource Costs Before They Hit Your Bill](https://medium.com/@kevinmya/how-i-built-a-tool-to-estimate-terraform-managed-resource-costs-before-they-hit-your-bill-f634c613a84c)
+
 ---
 
 ## Table of Contents
@@ -137,15 +139,7 @@ python3 terraform_gcs_rum_counter.py \
 
 ### Terminal
 
-```
-State File                                                             Billable RUM    Data RS    Null RS      Total
------------------------------------------------------------------------------------------------------------------------------
-environments/prod/network/default.tfstate                                       12          3          1         16
-environments/prod/compute/default.tfstate                                       27          5          0         32
-environments/staging/default.tfstate                                             8          2          2         12
------------------------------------------------------------------------------------------------------------------------------
-GRAND TOTAL                                                                     47         10          3         60
-```
+![CLI example output](https://github.com/kevinmya/terraform-gcs-rum-counter/raw/main/docs/example-output.png)
 
 ### Report file
 
