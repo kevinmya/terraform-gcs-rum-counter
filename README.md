@@ -31,9 +31,9 @@ A lightweight Python CLI that scans Terraform state files stored in Google Cloud
 
 If you’ve ever migrated to HCP Terraform (formerly Terraform Cloud) or been hit with an unexpected bill, you know the pain: you don’t really know how many **"managed resources"** you have until it’s too late.
 
-HashiCorp bills Terraform Cloud by the number of managed resources under management (RUM or Resource Under Management). The problem? You might have dozens of .tfstate files scattered across a Google Cloud Storage bucket, and there's no easy out of the box way to audit them all and get a total count before committing to a plan.
+The problem? You might have dozens of `.tfstate` files scattered across a Google Cloud Storage bucket, and there's no easy out of the box way to audit them all and get a total count before committing to a plan.
 
-Not all resources in your state file count, `data` sources and `null_resource` blocks are excluded. This tool automates that distinction across an entire GCS bucket, giving you a per-state-file breakdown and a grand total.
+HashiCorp bills Terraform Cloud by the number of managed resources under management **(RUM)**. Not all resources in your state file count, `data` sources and `null_resource` blocks are excluded. This tool automates that distinction across an entire GCS bucket, giving you a per-state-file breakdown and a grand total.
 
 ---
 
