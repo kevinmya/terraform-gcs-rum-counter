@@ -5,7 +5,7 @@
 [![Terraform](https://img.shields.io/badge/terraform-statefiles-purple)](https://developer.hashicorp.com/terraform)
 [![GCS](https://img.shields.io/badge/google-cloud_storage-orange)](https://cloud.google.com/storage)
 
-A lightweight Python CLI that scans Terraform state files stored in Google Cloud Storage (GCS) and estimates your **Terraform managed resource (RUM)** counts — helping you understand potential [HCP Terraform billing](https://developer.hashicorp.com/terraform/cloud-docs/overview/estimate-hcp-terraform-cost) before you get a surprise invoice.
+A lightweight Python CLI that scans Terraform state files stored in Google Cloud Storage (GCS) and estimates your **Terraform managed resource (RUM)** counts, helping you understand potential [HCP Terraform billing](https://developer.hashicorp.com/terraform/cloud-docs/overview/estimate-hcp-terraform-cost) before you get a surprise invoice.
 
 > 📖 **Background:** Read the full write-up on Medium — [How I Built a Tool to Estimate Terraform Managed Resource Costs Before They Hit Your Bill](https://medium.com/@kevinmya/how-i-built-a-tool-to-estimate-terraform-managed-resource-costs-before-they-hit-your-bill-f634c613a84c)
 
